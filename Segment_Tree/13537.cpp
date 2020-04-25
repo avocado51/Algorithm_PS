@@ -20,28 +20,7 @@ vector<int> merge(vector<int> &v1, vector<int> &v2)
     {
         ret.push_back(v2[k]);
     }
-    // int i = 0, j = 0;
-    // while (i < v1.size() && j < v2.size())
-    // {
-    //     if (v1[i] <= v2[j])
-    //     {
-    //         ret.push_back(v1[i]);
-    //         i++;
-    //     }
-    //     else
-    //     {
-    //         ret.push_back(v2[j]);
-    //         j++;
-    //     }
-    // }
-    // for (int k = i; k < v1.size(); k++)
-    // {
-    //     ret.push_back(v1[k]);
-    // }
-    // for (int k = j; k < v2.size(); k++)
-    // {
-    //     ret.push_back(v2[k]);
-    // }
+
     sort(ret.begin(), ret.end());
 
     return ret;
@@ -58,9 +37,6 @@ void init(vector<int> *tree, int *arr, int node, int start, int end)
     init(tree, arr, node * 2 + 1, (start + end) / 2 + 1, end);
     cout << node << " " << node * 2 + 1 << '\n';
     tree[node] = merge(tree[node * 2], tree[node * 2 + 1]);
-    // for (int i = 0; i < tree[node].size(); i++)
-    //     cout << tree[node][i] << ' ';
-    // cout << '\n';
 }
 int query(vector<int> *tree, int node, int start, int end, int left, int right, int k)
 {
