@@ -124,13 +124,6 @@ int main()
         }
 
         bfs(a, b);
-
-        // for (int i = 0; i < MAXX + 1; i++)
-        // {
-        //     if (visited[i] != -1)
-        //         cout << i << " " << op[i] << '\n';
-        // }
-        // cout << '\n';
     }
     return 0;
 }

@@ -6,6 +6,8 @@
 #define INF 987654321
 using namespace std;
 
+//BOJ 게리맨더링2 https://www.acmicpc.net/problem/17779
+
 int n;
 int A[22][22], map[22][22];
 typedef pair<int, int> pp;

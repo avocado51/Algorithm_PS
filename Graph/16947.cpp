@@ -5,6 +5,8 @@
 #include <queue>
 #define MAXX 3001
 using namespace std;
+// BOJ 여행가자 https://www.acmicpc.net/problem/1976
+
 int n;
 bool flag = false;
 vector<int> station[MAXX];
@@ -73,7 +75,7 @@ int main()
             unionFind(pn, pi);
         }
     }
-    cout << "Debug" << '\n';
+
     for (int i = 1; i <= n; i++)
     {
         cout << chk[i] << '\n';

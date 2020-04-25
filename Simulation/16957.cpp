@@ -3,6 +3,7 @@
 #include <queue>
 #define INF 300001
 using namespace std;
+//BOJ https://www.acmicpc.net/problem/16957
 
 int r, c;
 int map[501][501];

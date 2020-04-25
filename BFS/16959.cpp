@@ -6,6 +6,10 @@
 #define ROOK 2
 
 using namespace std;
+//BOJ 체스판 여행1 https://www.acmicpc.net/problem/16959
+
+//미완성
+
 int n, ans = 987654321;
 int chess[11][11];
 typedef pair<int, int> pp;
@@ -66,7 +70,7 @@ void bfs(pp start)
             //다 들렀는지 확인하는 과정???????
             //말을 바꾸는 과정도 해야한다.
 
-            cout << chess[x][y] << " " << cnt << " " << now.prev << '\n';
+            // cout << chess[x][y] << " " << cnt << " " << now.prev << '\n';
             for (int v = 0; v <= 2; v++)
             {
                 if (v == 0)
