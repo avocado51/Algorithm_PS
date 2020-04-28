@@ -23,6 +23,8 @@ int main()
         //미리 라인에 신호등 루틴을 구해놓는다.
     }
 
+    //처음에는 모두 빨간색이다.
+
     int time = 0;
     for (int i = 1; i <= l;)
     {
@@ -31,13 +33,6 @@ int main()
             //신호등이 존재
             //빨간색에 걸리는 시간이면 기다리고
             //초록색에 걸리는 시간이면 지나간다.
-            int r = line[i].front().first;
-            int g = line[i].front().second;
-            if (time % (r + g) == 0)
-            {
-                //빨간색 루틴
-                time += r;
-            }
         }
 
         time++; //1초에 1미터 이동

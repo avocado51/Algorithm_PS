@@ -2,54 +2,132 @@
 #include <vector>
 
 using namespace std;
-//BOJ 야구 https://www.acmicpc.net/problem/17281
 
-int inningRes[51][10];
-int score = 0;
 int inning;
-bool chk[10];
+int inningRes[51][10];
 int order[10];
+bool chk[10];
+int score = 0;
+int status = 0;
+
 int max(const int &a, const int &b)
 {
     if (a > b)
         return a;
     return b;
 }
+int calc()
+{
+    int ret = 0;
+
+    for (int i = 4; i < 7; i++)
+    {
+        if ((status & (1 << i)) > 0)
+        {
+            ret++;
+            status = status & ~(1 << i);
+        }
+    }
+
+    return ret;
+}
 int playGame()
 {
-    for (int i = 1; i <= 9; i++)
+    int last = -1, idx = 1, cntOut = 0;
+    int res = 0;
+
+    for (int j = 1; j <= inning; j++)
     {
-        cout << order[i] << ' ';
+
+        while (1)
+        {
+            if (last != -1)
+            {
+                idx = last;
+                last = -1;
+            }
+
+            int tmp = inningRes[j][order[idx]];
+
+            if (tmp == 0)
+            {
+                cntOut++;
+                if (cntOut == 3)
+                {
+                    cntOut = 0;
+                    status = 0;
+                    last = idx + 1;
+                    if (last == 10)
+                        last = 1;
+                    break;
+                }
+            }
+            else if (tmp == 1)
+            {
+                status++;
+                status = status << 1;
+                res += calc();
+            }
+            else if (tmp == 2)
+            {
+                status++;
+                status = status << 2;
+                res += calc();
+            }
+            else if (tmp == 3)
+            {
+                status++;
+                status = status << 3;
+                res += calc();
+            }
+            else if (tmp == 4)
+            {
+                status++;
+                for (int i = 0; i < 4; i++)
+                {
+                    if ((status & (1 << i)) > 0)
+                    {
+                        res++;
+                    }
+                }
+                status = 0;
+            }
+
+            idx++;
+            if (idx == 10)
+            {
+                last = -1;
+                idx = 1;
+            }
+        }
     }
-    cout << '\n';
+    return res;
 }
-
-void dfs(int idx, int now, int cnt)
+void dfs(int cnt)
 {
-    if (cnt == 9)
+    if (cnt > 9)
     {
-        //9명 전부 순서를 다 정함
         score = max(score, playGame());
+
         return;
     }
-
-    if (idx == 4)
+    if (cnt == 4)
     {
-        chk[idx] = true;
-        order[idx] = 1;
-        dfs(idx + 1, now, cnt + 1);
-        return;
+        dfs(cnt + 1);
     }
-
-    for (int i = idx; i <= 9; i++)
+    else
     {
-        if (chk[i])
-            continue;
-        chk[i] = 1;
-        order[i] = now;
-        dfs(i + 1, now + 1, cnt + 1);
-        chk[i] = 0;
-        order[i] = 0;
+        for (int i = 2; i <= 9; i++)
+        {
+            if (!chk[i])
+            {
+                chk[i] = 1;
+                order[cnt] = i;
+                dfs(cnt + 1);
+                order[cnt] = 0;
+                chk[i] = 0;
+            }
+        }
     }
 }
 int main()
@@ -59,15 +137,16 @@ int main()
     cin.tie(0);
 
     cin >> inning;
-
-    for (int i = 0; i < inning; i++)
+    for (int i = 1; i <= inning; i++)
     {
         for (int j = 1; j <= 9; j++)
         {
             cin >> inningRes[i][j];
         }
     }
-
-    dfs(1, 2, 0);
+    chk[1] = true;
+    order[4] = 1;
+    dfs(1);
+    cout << score << '\n';
     return 0;
 }
