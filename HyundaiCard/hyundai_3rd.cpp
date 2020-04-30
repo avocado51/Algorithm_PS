@@ -2,14 +2,7 @@
 #include <vector>
 #include <map>
 using namespace std;
-/*
-이미 가입된 회원들의 아이디와 사용자가 원하는 아이디가 주어진다. 
-사용자가 원하는 아이디가 아이디 목록에 없다면 그 아이디를 사용하고, 
-만약 없다면 해당 조건에 따라 유효한 아이디를 만든다. 
-1. 아이디는 문자열 / 문자열 + 숫자로 이루어져있다. 
-2. 숫자는 null 일 수 있다. -> null일 때는 숫자를 1부터 붙여가면서 유효한 아이디임을 검사한다.
-3. 숫자가 null이 아닌 경우 -> 숫자 + 1 을 붙여가면서 유효한 아이디임을 검사한다.
-*/
+
 string solution(vector<string> registered_list, string new_id) {
     string answer = "";
     map<string, int> idMap;
