@@ -96,14 +96,7 @@ int main()
                 cost[i][j] = value;
             }
         }
-        // for (int i = 0; i < n; i++)
-        // {
-        //     for (int j = 0; j < n; j++)
-        //     {
-        //         cout << cost[i][j] << ' ';
-        //     }
-        //     cout << '\n';
-        // }
+
         int ans = 0;
         for (int i = 0; i < n; i++)
         {
@@ -132,19 +125,10 @@ int main()
                 }
                 if (ans < tmp + tmp2)
                 {
-                    // cout << tmp << " " << tmp2 << '\n';
                     ans = tmp + tmp2;
                 }
             }
         }
-        // cout << map[idx1.first][idx1.second] << " " << map[idx2.first][idx2.second] << '\n';
-
-        // for (int i = 0; i < m; i++)
-        // {
-        //     ans += map[idx1.first][idx1.second + i] * map[idx1.first][idx1.second + i];
-        //     ans += map[idx2.first][idx2.second + i] * map[idx2.first][idx2.second + i];
-        // }
-        // int ans = map[idx1.first][idx1.second] * map[idx1.first][idx1.second] + map[idx2.first][idx2.second] * map[idx2.first][idx2.second];
 
         cout << "#" << tc << " " << ans << '\n';
     }
