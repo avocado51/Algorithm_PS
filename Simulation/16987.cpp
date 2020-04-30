@@ -2,6 +2,7 @@
 #include <vector>
 
 using namespace std;
+//BOJ 계란으로 계란치기 https://www.acmicpc.net/problem/16987
 
 int n;
 typedef pair<int, int> pp;

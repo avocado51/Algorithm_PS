@@ -5,6 +5,7 @@
 
 using namespace std;
 //BOJ 캐슬 디펜스 https://www.acmicpc.net/problem/17135
+
 int map[17][17];
 bool chk[16];
 int n, m, d;

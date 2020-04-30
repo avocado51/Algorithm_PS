@@ -7,10 +7,7 @@
 using namespace std;
 // BOJ 여행가자 https://www.acmicpc.net/problem/1976
 
-int n;
-bool flag = false;
-vector<int> station[MAXX];
-bool chk[MAXX];
+int n, m;
 
 int parent[MAXX];
 
@@ -30,7 +27,7 @@ void unionFind(int a, int b)
 
     parent[pa] = pb;
 }
-bool isSameParent(int a, int b)
+bool isSameSet(int a, int b)
 {
     int pa = find(a);
     int pb = find(b);
@@ -45,41 +42,46 @@ int main()
     ios_base::sync_with_stdio(0);
     cin.tie(0);
 
-    cin >> n;
+    cin >> n >> m;
 
     for (int i = 1; i <= n; i++)
     {
         parent[i] = -1;
     }
-    for (int i = 0; i < n; i++)
-    {
-        int a, b;
-        cin >> a >> b;
-        station[a].push_back(b);
-        station[b].push_back(a);
-    }
-
     for (int i = 1; i <= n; i++)
     {
-        for (int next : station[i])
+        for (int j = 1; j <= n; j++)
         {
-            int pi = find(i);
-            int pn = find(n);
-
-            if (pn == pi)
-            {
-                chk[i] = true;
-                chk[next] = true;
-            }
-
-            unionFind(pn, pi);
+            int tmp;
+            cin >> tmp;
+            if (tmp)
+                unionFind(i, j);
         }
     }
 
-    for (int i = 1; i <= n; i++)
+    int plan[1001] = {0};
+    for (int i = 0; i < m; i++)
     {
-        cout << chk[i] << '\n';
+        cin >> plan[i];
     }
 
+    bool flag = true;
+    int start = plan[0];
+    for (int i = 1; i < m; i++)
+    {
+        if (isSameSet(start, plan[i]))
+        {
+            start = plan[i];
+        }
+        else
+        {
+            flag = false;
+            break;
+        }
+    }
+    if (flag)
+        cout << "YES" << '\n';
+    else
+        cout << "NO" << '\n';
     return 0;
 }

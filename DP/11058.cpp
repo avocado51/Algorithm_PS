@@ -3,6 +3,7 @@
 #include <queue>
 #include <cstring>
 using namespace std;
+//BOJ 크리보드 https://www.acmicpc.net/problem/11058
 
 typedef pair<int, int> pp;
 int max(const int &a, const int &b)
@@ -11,51 +12,7 @@ int max(const int &a, const int &b)
         return a;
     return b;
 }
-// void bfs()
-// {
-//     queue<pp> q;
-//     q.push(pp(0, 0));
-//     int buffer = 0; //버퍼에 들어있는 A의 개수
-//     while (!q.empty())
-//     {
-//         int cnt = q.front().first;
-//         int Ass = q.front().second;
-//         q.pop();
 
-//         if (cnt >= n)
-//         {
-//             res = max(res, Ass);
-//             continue;
-//         }
-
-//         for (int i = 0; i < 4; i++)
-//         {
-//             switch (i)
-//             {
-//             case 0:
-//                 //A 출력
-//                 q.push(pp(cnt + 1, Ass + 1));
-//                 break;
-//             case 1:
-//                 //전체 선택
-//                 q.push(pp(cnt + 1, Ass));
-//                 break;
-//             case 2:
-//             {
-//                 buffer = Ass;
-//                 q.push(pp(cnt + 1, Ass));
-//                 break;
-//             }
-//             case 3:
-//                 q.push(pp(cnt + 1, Ass + buffer));
-//                 break;
-//             default:
-//                 break;
-//             }
-//         }
-//         cout << cnt << " " << Ass << '\n';
-//     }
-// }
 int main()
 {
 

@@ -3,6 +3,8 @@
 #include <algorithm>
 #define MAXX 1000001
 using namespace std;
+//BOJ https://www.acmicpc.net/problem/17410
+//unsolved
 
 int num[MAXX];
 vector<int> tree[MAXX];

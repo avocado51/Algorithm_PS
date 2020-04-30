@@ -2,6 +2,7 @@
 #include <vector>
 
 using namespace std;
+//BOJ 야구 https://www.acmicpc.net/problem/17281
 
 int inning;
 int inningRes[51][10];

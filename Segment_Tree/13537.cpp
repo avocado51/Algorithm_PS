@@ -4,6 +4,8 @@
 #include <algorithm>
 #define MAXX 1000001
 using namespace std;
+//BOJ 수열과 쿼리1 https://www.acmicpc.net/problem/13537
+
 vector<int> tree[MAXX];
 int arr[MAXX];
 vector<int> merge(vector<int> &v1, vector<int> &v2)

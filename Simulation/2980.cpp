@@ -2,6 +2,8 @@
 #include <vector>
 
 using namespace std;
+//BOJ https://www.acmicpc.net/problem/2980
+//unsolved
 
 typedef pair<int, int> pp;
 
