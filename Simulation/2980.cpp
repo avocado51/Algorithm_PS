@@ -3,7 +3,6 @@
 
 using namespace std;
 //BOJ 도로와 신호등 https://www.acmicpc.net/problem/2980
-//unsolved
 
 typedef pair<int, int> pp;
 

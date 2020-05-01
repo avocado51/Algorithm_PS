@@ -1,163 +1,194 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <functional>
-#include <deque>
+#include <algorithm>
+#include <cstring>
 using namespace std;
-int A[10], B[10], T[1001];
-int n, m, k, a, b;
-int chkA[10], chkB[10];
-bool chk[1001];
-int ans = 0;
+//차량정비소 https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy
 
+int n, m, k, a, b, ans = 0;
+int A[10], B[10], T[1001];
 typedef struct User
 {
     int idx, rec, rep, time, wait;
-    User(int i, int rc, int rp, int t, int w) : idx(i), rec(rc), rep(rp), time(t), wait(w){};
-};
+    bool chk;
+    User(int i, int rc, int rp, int t, int w, bool c) : idx(i), rec(rc), rep(rp), time(t), wait(w), chk(c){};
+} User;
+bool chkA[10], chkB[10], finished[1001];
+vector<User> waitA, waitB;
+queue<User> aq, bq;
 
 bool compare(const User &a, const User &b)
 {
     if (a.wait == b.wait)
     {
-        return a.rec > b.rec;
+        return a.rec < b.rec;
     }
-    else
-        return a.wait < b.wait;
+    return a.wait > b.wait;
 }
+bool check()
+{
+    for (int i = 1; i <= k; i++)
+    {
+        if (!finished[i])
+            return false;
+    }
+    return true;
+}
+void inputWaitingB()
+{
+    //정비 큐 만들기
+    //wait의 값이 같다면 접수 창구의 번호가 작은 순으로 정렬하낟.
 
+    if (waitB.size() > 0)
+    {
+        sort(waitB.begin(), waitB.end(), compare);
+        //이전에 대기하던 사람이 있었다면
+        for (int j = 1; j <= m; j++)
+        {
+            //정비 창구에 남는 곳이 있는지 확인한다.
+            if (!chkB[j])
+            {
+                chkB[j] = true;
+                if (waitB[0].rec == a && j == b)
+                {
+                    ans += waitB[0].idx;
+                }
+                bq.push(User(waitB[0].idx, waitB[0].rec, j, waitB[0].time + 1, waitB[0].wait, waitB[0].chk));
+                waitB.erase(waitB.begin());
+                if (!waitB.size())
+                    break;
+            }
+        }
+
+        if (waitB.size() > 0)
+        {
+            //wiat를 하나씩 늘려준다.
+            for (int j = 0; j < waitB.size(); j++)
+            {
+                waitB[j].wait += 1;
+            }
+        }
+    }
+}
+void inputWaitingA(int hour)
+{
+    // cout << hour << " " << waitA.size() << '\n';
+    if (waitA.size() > 0)
+    {
+        //이미 대기중인 사람들을 먼저 넣는다.
+        for (int j = 1; j <= n; j++)
+        {
+            if (!chkA[j])
+            {
+                //비어있는 접수대
+                chkA[j] = true;
+                aq.push(User(waitA[0].idx, j, 0, 1, 0, true));
+                waitA.erase(waitA.begin());
+                if (!waitA.size())
+                    break;
+            }
+        }
+    }
+    for (int i = 1; i <= k; i++)
+    {
+
+        if (T[i] == hour)
+        {
+            bool chk = false;
+            for (int j = 1; j <= n; j++)
+            {
+                if (!chkA[j])
+                {
+                    chkA[j] = true;
+                    aq.push(User(i, j, 0, 1, 0, true));
+                    chk = true;
+                    break;
+                }
+            }
+            if (!chk)
+                waitA.push_back(User(i, 0, 0, 0, 0, false));
+        }
+    }
+}
 void bfs()
 {
-    queue<User> recq, repq;
-    vector<User> waitingRec, waitingRep;
+    /*
+    접수 창구의 우선순위는 아래와 같다.
 
-    bool flag = true;
-    int sec = 0;
-    while (flag)
+   ① 여러 고객이 기다리고 있는 경우 고객번호가 낮은 순서대로 우선 접수한다.
+   ② 빈 창구가 여러 곳인 경우 접수 창구번호가 작은 곳으로 간다.
+
+
+정비 창구의 우선순위는 아래와 같다.
+
+   ① 먼저 기다리는 고객이 우선한다.
+   ② 두 명 이상의 고객들이 접수 창구에서 동시에 접수를 완료하고 정비 창구로 이동한 경우, 이용했던 접수 창구번호가 작은 고객이 우선한다.
+   ③ 빈 창구가 여러 곳인 경우 정비 창구번호가 작은 곳으로 간다.
+
+    */
+    int hour = 0;
+    while (1)
     {
-        flag = false;
-
-        for (int i = 1; i <= k; i++)
+        if (check())
         {
-            if (!chk[i] && T[i] <= sec)
-            {
-                for (int j = 1; j <= n; j++)
-                {
-                    if (!chkA[j])
-                    {
-                        chkA[j] = i;
-                        chk[i] = 1;
-                        recq.push(User(i, j, 0, 1, 0));
-                        break;
-                    }
-                }
-                if (!chk[i])
-                {
-                    //대기큐에 넣는다.
-                    waitingRec.push_back(User(i, 0, 0, 0, 0));
-                }
-            }
+            //모두 다 할 일을 끝냈는지 확인한다.
+            break;
         }
-        ++sec;
 
-        int size = recq.size();
+        inputWaitingA(hour);
+        //접수 진행
+        ++hour;
+        int size = aq.size();
 
         while (size--)
         {
-            //사이즈 별로 하면 들어온 순서대로 처리된다.
-            User now = recq.front();
-            recq.pop();
+            //접수 진행
+            //접수가 다 끝나면 바로 waiting에 넣어버린다.
+            User now = aq.front();
+            aq.pop();
 
-            int idx = now.idx;
-            int rec = now.rec;
-            int rep = now.rep;
-            int time = now.time;
-            int wait = now.wait;
-
-            //접수 창고 끝
-            if (time >= A[rec])
+            // cout << now.idx << " " << now.rec << " " << now.time << "\n";
+            if (now.time == A[now.rec])
             {
-                if (chkA[rec] == idx)
-                    chkA[rec] = 0;
-
-                //빈 정비 창구가 없다.
-                waitingRep.push_back(User(idx, rec, 0, time, wait + 1));
+                //끝마쳤음
+                chkA[now.rec] = false;
+                waitB.push_back(now);
             }
             else
             {
-                //아직 접수 창고 안끝남
-                recq.push(User(idx, rec, 0, time + 1, wait));
-                flag = true;
-            }
-        }
-        //waiting을 정렬하고 빈 곳이 있으면 넣는다.
-        if (waitingRep.size() > 0)
-        {
-            sort(waitingRep.begin(), waitingRep.end(), compare);
-
-            // cout << "DEBBBBB" << '\n';
-            // for (int i = 0; i < waiting.size(); i++)
-            // {
-            //     cout << waiting[i].wait << " " << waiting[i].idx << '\n';
-            // }
-            for (int i = 1; i <= m; i++)
-            {
-                if (!chkB[i] && waitingRep.size() > 0)
-                {
-                    User now = waitingRep.back();
-
-                    chkB[i] = now.idx;
-                    if (now.rec == a && i == b)
-                    {
-                        cout << now.idx << '\n';
-                        ans += now.idx;
-                    }
-                    repq.push(User(now.idx, now.rec, i, now.time + 1, now.wait));
-                    waitingRep.pop_back();
-                }
-            }
-            if (waitingRep.size() > 0)
-            {
-                for (int i = 0; i < waitingRep.size(); i++)
-                {
-                    waitingRep[i].wait += 1;
-                }
-                flag = true;
+                aq.push(User(now.idx, now.rec, now.rep, now.time + 1, now.wait, now.chk));
             }
         }
 
-        size = repq.size();
+        inputWaitingB();
 
+        size = bq.size();
         while (size--)
         {
-            User now = repq.front();
-            repq.pop();
+            //정비 진행
+            User now = bq.front();
+            bq.pop();
 
-            int idx = now.idx;
-            int rec = now.rec;
-            int rep = now.rep;
-            int time = now.time;
-            int wait = now.wait;
-
-            if (time >= A[rec] + B[rep])
+            if (now.time == A[now.rec] + B[now.rep])
             {
-                //끝났음
-                if (chkB[rep] == idx)
-                    chkB[rep] = 0;
+                chkB[now.rep] = false;
+                finished[now.idx] = true;
             }
             else
             {
-                repq.push(User(idx, rec, rep, time + 1, wait));
-                flag = true;
+                bq.push(User(now.idx, now.rec, now.rep, now.time + 1, now.wait, now.chk));
             }
         }
     }
 }
 void init()
 {
-    memset(chk, 0, sizeof(chk));
+    memset(finished, 0, sizeof(finished));
     memset(chkA, 0, sizeof(chkA));
     memset(chkB, 0, sizeof(chkB));
+    waitB.clear();
+    waitA.clear();
     ans = 0;
 }
 int main()
@@ -172,9 +203,7 @@ int main()
     for (int tc = 1; tc <= t; tc++)
     {
         init();
-
         cin >> n >> m >> k >> a >> b;
-        //접수 창고의 개수, 장비 창구의 개수, 고객의 수, 지갑고객이 이용한 접수 창고의 번호, 정비 창구의 번호
 
         for (int i = 1; i <= n; i++)
         {
@@ -189,13 +218,11 @@ int main()
             cin >> T[i];
         }
 
-        //우선순위큐를 써서 접수 창고에서 빼낸 고객은 정비 창구 큐에 넣는다.
         bfs();
         if (!ans)
             ans = -1;
 
         cout << "#" << tc << " " << ans << '\n';
     }
-
     return 0;
 }

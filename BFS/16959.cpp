@@ -8,7 +8,7 @@
 using namespace std;
 //BOJ 체스판 여행1 https://www.acmicpc.net/problem/16959
 
-//미완성
+//unsolved
 
 int n, ans = 987654321;
 int chess[11][11];

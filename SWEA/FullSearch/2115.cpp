@@ -3,6 +3,7 @@
 #include <cstring>
 
 using namespace std;
+//벌꿀채취 
 
 int n, m, c;
 int map[11][11];

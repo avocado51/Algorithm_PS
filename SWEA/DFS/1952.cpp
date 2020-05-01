@@ -4,6 +4,8 @@
 #define INF 987654321
 using namespace std;
 
+//수영장
+
 bool chk[13];
 int voucher[5];
 int dayInMonth[13];

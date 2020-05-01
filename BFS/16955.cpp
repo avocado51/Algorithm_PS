@@ -4,6 +4,8 @@
 
 using namespace std;
 
+//BOJ 오목, 이길 수 있을까? https://www.acmicpc.net/problem/16955
+
 char map[11][11];
 bool visited[11][11];
 typedef pair<int, int> pp;

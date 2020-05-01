@@ -4,6 +4,8 @@
 #include <cstring>
 #define INF 987654321
 using namespace std;
+//BOJ N*M보드 완주하기 https://www.acmicpc.net/problem/9944
+//unsolved
 
 int n, m;
 char map[31][31];
