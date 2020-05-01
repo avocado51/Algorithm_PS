@@ -1,4 +1,4 @@
-# 백준, SWEA 알고리즘 문제 풀이 
+# 백준, SWEA, Programmers 알고리즘 문제 풀이 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
 
 >## 05/01(금)
