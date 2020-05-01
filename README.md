@@ -2,7 +2,7 @@
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
 
 >## 05/01(금)
-SWEA 차량정비소 [2477_2](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy) 
+SWEA 차량정비소 [2477](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy) 
 <br>
 BOJ 도로와 신호등 [2980](https://www.acmicpc.net/problem/2980)
 <br>
