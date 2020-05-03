@@ -6,6 +6,8 @@ BOJ 연구소3 [17142](https://www.acmicpc.net/problem/17142)
 <br>
 BOJ 유턴싫어 [2823](https://www.acmicpc.net/problem/2823)
 <br>
+BOJ 1,2,3 더하기3 [15988](https://www.acmicpc.net/problem/15988)
+<br>
 <br>
 > ## 05/02(토)
 
