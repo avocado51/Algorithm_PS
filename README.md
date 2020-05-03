@@ -12,20 +12,12 @@ SWEA 격자판의 숫자 이어 붙이기 [2819](https://swexpertacademy.com/mai
 <br>
 <br>
 > ## 05/02(토)
-<<<<<<< HEAD
->
-> BOJ 큐빙 [5372](https://www.acmicpc.net/problem/5373)
-> BOJ 이모티콘 [14226](https://www.acmicpc.net/problem/14226)
-> <br>
->
-=======
-
 BOJ 큐빙 [5372](https://www.acmicpc.net/problem/5373)
 <br>
 BOJ 이모티콘 [14226](https://www.acmicpc.net/problem/14226)
 <br>
 <br>
->>>>>>> 447a4832c1ec3c936b6ea043b0f41296a3a35685
+
 > ## 05/01(금)
 SWEA 차량정비소 [2477](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy)
 <br>
