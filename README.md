@@ -8,6 +8,8 @@ BOJ 유턴싫어 [2823](https://www.acmicpc.net/problem/2823)
 <br>
 BOJ 1,2,3 더하기3 [15988](https://www.acmicpc.net/problem/15988)
 <br>
+SWEA 격자판의 숫자 이어 붙이기 [2819](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7I5fgqEogDFAXB&categoryId=AV7I5fgqEogDFAXB&categoryType=CODE)
+<br>
 <br>
 > ## 05/02(토)
 
