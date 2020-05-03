@@ -73,7 +73,6 @@ void inputWaitingB()
 }
 void inputWaitingA(int hour)
 {
-    // cout << hour << " " << waitA.size() << '\n';
     if (waitA.size() > 0)
     {
         //이미 대기중인 사람들을 먼저 넣는다.
