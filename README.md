@@ -1,7 +1,12 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
-
+>## 05/03(일)
+BOJ 연구소3 [17142](https://www.acmicpc.net/problem/17142)
+<br>
+BOJ 유턴싫어 [2823](https://www.acmicpc.net/problem/2823)
+<br>
+<br>
 > ## 05/02(토)
 
 BOJ 큐빙 [5372](https://www.acmicpc.net/problem/5373)
