@@ -1,6 +1,12 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+>## 05/04(월)
+SWEA 혁진이의 프로그램 검증 [1824](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4yLUiKDUoDFAUx&categoryId=AV4yLUiKDUoDFAUx&categoryType=CODE)
+<br>
+SWEA 러시아 국기 같은 깃발 [4613](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWQl9TIK8qoDFAXj&categoryId=AWQl9TIK8qoDFAXj&categoryType=CODE)
+<br>
+<br>
 >## 05/03(일)
 BOJ 연구소3 [17142](https://www.acmicpc.net/problem/17142)
 <br>
