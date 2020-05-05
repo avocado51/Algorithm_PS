@@ -1,6 +1,14 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+>## 05/05(화)
+BOJ 주사위 윷놀이 [17825](https://www.acmicpc.net/problem/17825)
+<br>
+SWEA 벽돌깨기 [5656](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRQm6qfL0DFAUo)
+<br>
+BOJ LCD Test [2290](https://www.acmicpc.net/problem/2290)
+<br>
+<br>
 >## 05/04(월)
 SWEA 혁진이의 프로그램 검증 [1824](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4yLUiKDUoDFAUx&categoryId=AV4yLUiKDUoDFAUx&categoryType=CODE)
 <br>
