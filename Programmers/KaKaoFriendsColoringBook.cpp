@@ -10,57 +10,6 @@ int dx[4] = {0, 0, -1, 1}, dy[4] = {-1, 1, 0, 0};
 
 typedef pair<int, int> pp;
 
-// void bfs(int m, int n, int x, int y)
-// {
-//     queue<pp> q;
-//     q.push(pp(x, y));
-
-//     visited[x][y] = true;
-//     int color = map[x][y];
-//     int area = 1;
-
-//     while (!q.empty())
-//     {
-
-//         int x = q.front().first;
-//         int y = q.front().second;
-//         q.pop();
-
-//         for (int i = 0; i < 4; i++)
-//         {
-//             int nx = x + dx[i];
-//             int ny = y + dy[i];
-//             if (nx < 0 || nx >= m || ny < 0 || ny >= n)
-//                 continue;
-
-//             if (color == map[nx][ny] && !visited[nx][ny])
-//             {
-//                 visited[nx][ny] = true;
-//                 area++;
-//                 q.push(pp(nx, ny));
-//             }
-//         }
-//     }
-//     res2 = max(res2, area);
-// }
-// void dfs(int x, int y, int m, int n, int label, int color)
-// {
-//     if (visited[x][y])
-//         return;
-//     visited[x][y] = true;
-//     widthArea[label]++;
-
-//     for (int i = 0; i < 4; i++)
-//     {
-//         int nx = x + dx[i];
-//         int ny = y + dy[i];
-
-//         if (nx < 0 || nx >= m || ny < 0 || ny >= n)
-//             continue;
-//         if (map[nx][ny] == color)
-//             dfs(nx, ny, m, n, label, color);
-//     }
-// }
 vector<int> solution(int m, int n, vector<vector<int>> map)
 {
 

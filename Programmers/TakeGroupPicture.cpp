@@ -4,6 +4,7 @@
 
 using namespace std;
 //Programmers 카카오 기출 단체사진찍기 https://programmers.co.kr/learn/courses/30/lessons/1835
+//unsolved
 
 //둘 사이의 최대 간격은 6
 //6이 나오면 둘을 양 끝단에 놓고 확인한다.
