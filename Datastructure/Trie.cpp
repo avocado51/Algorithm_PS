@@ -1,10 +1,7 @@
-#include <string>
-#include <vector>
-#include <unordered_map>
 #include <iostream>
+#include <unordered_map>
 using namespace std;
-//Programmers 카카오 기출 가사검색 https://programmers.co.kr/learn/courses/30/lessons/60060
-//unsolved
+
 struct Trie
 {
     // isEndOfWord is true if the node
@@ -55,23 +52,24 @@ bool search(Trie *root, const string &str)
     }
     return temp->isEndOfWord;
 }
-
-vector<int> solution(vector<string> words, vector<string> keyword)
+/*Driver function*/
+int main()
 {
-    vector<int> answer;
-    int n = words.size();
-
     Trie *root = nullptr;
 
-    for (int i = 0; i < n; i++)
-    {
-        insert(root, words[i]);
-    }
+    // insert(root, "geeks");
+    // cout << search(root, "geeks") << " ";
 
-    int k = keyword.size();
-    for (int j = 0; j < k; j++)
-    {
-    }
+    // insert(root, "for");
+    // cout << search(root, "for") << " ";
 
-    return answer;
+    // cout << search(root, "geekk") << " ";
+
+    // insert(root, "gee");
+    // cout << search(root, "gee") << " ";
+
+    // insert(root, "science");
+    // cout << search(root, "science") << endl;
+
+    return 0;
 }
