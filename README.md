@@ -1,6 +1,15 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+>## 05/06(수)
+Programmers 카카오 기출 [프렌즈 4 블록](https://programmers.co.kr/learn/courses/30/lessons/17679)
+<br>
+Programmers 카카오 기출 [크레인 인형 뽑기게임](https://programmers.co.kr/learn/courses/30/lessons/64061)
+<br>
+Programmers 카카오 기출 [카카오 프렌즈 컬러링북](https://programmers.co.kr/learn/courses/30/lessons/1829)
+<br>
+<br>
+
 >## 05/05(화)
 BOJ 주사위 윷놀이 [17825](https://www.acmicpc.net/problem/17825)
 <br>
