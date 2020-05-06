@@ -8,8 +8,11 @@ Programmers 카카오 기출 [크레인 인형 뽑기게임](https://programmers
 <br>
 Programmers 카카오 기출 [카카오 프렌즈 컬러링북](https://programmers.co.kr/learn/courses/30/lessons/1829)
 <br>
+Programmers 카카오 기출 [단체 사진 찍기](https://programmers.co.kr/learn/courses/30/lessons/1835)
 <br>
-
+BOJ 인구이동 [16234](https://www.acmicpc.net/problem/16234)
+<br>
+<br>
 >## 05/05(화)
 BOJ 주사위 윷놀이 [17825](https://www.acmicpc.net/problem/17825)
 <br>
