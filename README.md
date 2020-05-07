@@ -1,6 +1,12 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+>## 05/07(목)
+Programmers 카카오 기출 [캐시](https://programmers.co.kr/learn/courses/30/lessons/17680)
+<br>
+Programmers 카카오 기출 [압축](https://programmers.co.kr/learn/courses/30/lessons/17684)
+<br>
+<br>
 >## 05/06(수)
 Programmers 카카오 기출 [프렌즈 4 블록](https://programmers.co.kr/learn/courses/30/lessons/17679)
 <br>
