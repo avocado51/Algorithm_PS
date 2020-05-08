@@ -1,19 +1,23 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
-> ##05/08(금)
+
+> ## 05/08(금)
+
 Programmers 카카오 기출 [보행자 천국](https://programmers.co.kr/learn/courses/30/lessons/1832)
 <br>
 Programmers 카카오 기출 [셔틀버스](https://programmers.co.kr/learn/courses/30/lessons/17678)
 <br>
 <br>
->## 05/07(목)
+> ## 05/07(목)
+
 Programmers 카카오 기출 [캐시](https://programmers.co.kr/learn/courses/30/lessons/17680)
 <br>
 Programmers 카카오 기출 [압축](https://programmers.co.kr/learn/courses/30/lessons/17684)
 <br>
 <br>
->## 05/06(수)
+> ## 05/06(수)
+
 Programmers 카카오 기출 [프렌즈 4 블록](https://programmers.co.kr/learn/courses/30/lessons/17679)
 <br>
 Programmers 카카오 기출 [크레인 인형 뽑기게임](https://programmers.co.kr/learn/courses/30/lessons/64061)
@@ -25,7 +29,8 @@ Programmers 카카오 기출 [단체 사진 찍기](https://programmers.co.kr/le
 BOJ 인구이동 [16234](https://www.acmicpc.net/problem/16234)
 <br>
 <br>
->## 05/05(화)
+> ## 05/05(화)
+
 BOJ 주사위 윷놀이 [17825](https://www.acmicpc.net/problem/17825)
 <br>
 SWEA 벽돌깨기 [5656](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRQm6qfL0DFAUo)
@@ -33,13 +38,15 @@ SWEA 벽돌깨기 [5656](https://swexpertacademy.com/main/code/problem/problemDe
 BOJ LCD Test [2290](https://www.acmicpc.net/problem/2290)
 <br>
 <br>
->## 05/04(월)
+> ## 05/04(월)
+
 SWEA 혁진이의 프로그램 검증 [1824](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV4yLUiKDUoDFAUx&categoryId=AV4yLUiKDUoDFAUx&categoryType=CODE)
 <br>
 SWEA 러시아 국기 같은 깃발 [4613](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWQl9TIK8qoDFAXj&categoryId=AWQl9TIK8qoDFAXj&categoryType=CODE)
 <br>
 <br>
->## 05/03(일)
+> ## 05/03(일)
+
 BOJ 연구소3 [17142](https://www.acmicpc.net/problem/17142)
 <br>
 BOJ 유턴싫어 [2823](https://www.acmicpc.net/problem/2823)
@@ -50,6 +57,7 @@ SWEA 격자판의 숫자 이어 붙이기 [2819](https://swexpertacademy.com/mai
 <br>
 <br>
 > ## 05/02(토)
+
 BOJ 큐빙 [5372](https://www.acmicpc.net/problem/5373)
 <br>
 BOJ 이모티콘 [14226](https://www.acmicpc.net/problem/14226)
@@ -57,6 +65,7 @@ BOJ 이모티콘 [14226](https://www.acmicpc.net/problem/14226)
 <br>
 
 > ## 05/01(금)
+
 SWEA 차량정비소 [2477](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV6c6bgaIuoDFAXy)
 <br>
 BOJ 도로와 신호등 [2980](https://www.acmicpc.net/problem/2980)
