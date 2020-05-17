@@ -1,9 +1,15 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
-
+> ## 05/17(일)
+BOJ 색종이 붙이기 [17136](https://www.acmicpc.net/problem/17136)
+<br>
+BOJ Gaaaaaaaaaarden [18809](https://www.acmicpc.net/problem/18809)
+<br>
+BOJ 큐빙 [5373](https://www.acmicpc.net/problem/5373)
+<br>
+<br>
 > ## 05/08(금)
-
 Programmers 카카오 기출 [보행자 천국](https://programmers.co.kr/learn/courses/30/lessons/1832)
 <br>
 Programmers 카카오 기출 [셔틀버스](https://programmers.co.kr/learn/courses/30/lessons/17678)
