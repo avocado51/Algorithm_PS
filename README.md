@@ -2,6 +2,7 @@
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
 > ##05/17(일)
+<br>
 BOJ 색종이 붙이기 [17136](https://www.acmicpc.net/problem/17136)
 <br>
 BOJ Gaaaaaaaaaarden [18809](https://www.acmicpc.net/problem/18809)
