@@ -1,6 +1,12 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+> ## 05/20(수)
+BOJ 새로운 게임2 [17837](https://www.acmicpc.net/problem/17837)
+<br>
+SWEA 농작물 수확하기 [2805](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV7GLXqKAWYDFAXB)
+<br>
+<br>
 > ## 05/19(화)
 BOJ 게리맨더링2 [17779](https://www.acmicpc.net/problem/17779)
 <br>
