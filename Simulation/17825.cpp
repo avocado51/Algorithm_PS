@@ -64,20 +64,21 @@ int calc()
         int pos = horse[now];
         int dice = score[i];
         int next = root[pos][dice];
-        if (next != 32) {
-        bool flag = false;
-        for (int j = 0; j < 4; j++)
+        if (next != 32)
         {
-            if (j == now)
-                continue;
-            if (horse[j] == next)
+            bool flag = false;
+            for (int j = 0; j < 4; j++)
             {
-                flag = true;
-                break;
+                if (j == now)
+                    continue;
+                if (horse[j] == next)
+                {
+                    flag = true;
+                    break;
+                }
             }
-        }
-        if (flag)
-            return -1;
+            if (flag)
+                return -1;
         }
         //해당 위치로 이동
         ret += root[next][0];
