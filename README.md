@@ -1,6 +1,13 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+> ## 05/21(목)
+BOJ 원판돌리기 [17822](https://www.acmicpc.net/problem/17822)
+<br>
+BOJ 주사위 윷놀이 [17825](https://www.acmicpc.net/problem/17825)
+<br>
+<br>
+
 > ## 05/20(수)
 BOJ 새로운 게임2 [17837](https://www.acmicpc.net/problem/17837)
 <br>
