@@ -1,6 +1,13 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+> ## 05/22(금)
+BOJ 야구 [17281](https://www.acmicpc.net/problem/17281)
+<br>
+SWEA 최대 성적표 만들기 [4466](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWOUfCJ6qVMDFAWg&)
+<br>
+<br>
+
 > ## 05/21(목)
 BOJ 원판돌리기 [17822](https://www.acmicpc.net/problem/17822)
 <br>
