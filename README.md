@@ -2,9 +2,9 @@
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
 > ## 05/24(일)
-BOJ 과외맨 [5213](https://www.acmicpc.net/problem/5213)
+BOJ 과외맨 [5213](https://www.acmicpc.net/problem/5213) -unsolved
 <br>
-BOJ 가스관 [2931](https://www.acmicpc.net/problem/2931)
+BOJ 가스관 [2931](https://www.acmicpc.net/problem/2931) -unsolved
 <br>
 <br>
 > ## 05/23(토)
