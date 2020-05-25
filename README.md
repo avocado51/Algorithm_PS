@@ -1,6 +1,26 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+> ## 05/25(월)
+BOJ 배열돌리기4 [17406](https://www.acmicpc.net/problem/17406)
+<br>
+BOJ 다리만들기 [2146](https://www.acmicpc.net/problem/2146)
+<br>
+<br>
+> ## 05/24(일)
+BOJ 과외맨 [5213](https://www.acmicpc.net/problem/5213) -unsolved
+<br>
+BOJ 가스관 [2931](https://www.acmicpc.net/problem/2931) -unsolved
+<br>
+<br>
+> ## 05/23(토)
+SWEA 미로1 [1226](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14vXUqAGMCFAYD&)
+<br>
+SWEA Ladder1 [1210](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV14ABYKADACFAYh)
+<br>
+SWEA Flatten [1208](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV139KOaABgCFAYh)
+<br>
+<br>
 > ## 05/22(금)
 BOJ 야구 [17281](https://www.acmicpc.net/problem/17281)
 <br>
