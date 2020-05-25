@@ -1,6 +1,12 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+> ## 05/25(월)
+BOJ 배열돌리기4 [17406](https://www.acmicpc.net/problem/17406)
+<br>
+BOJ 다리만들기 [2146](https://www.acmicpc.net/problem/2146)
+<br>
+<br>
 > ## 05/24(일)
 BOJ 과외맨 [5213](https://www.acmicpc.net/problem/5213) -unsolved
 <br>
