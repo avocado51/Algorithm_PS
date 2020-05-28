@@ -1,6 +1,10 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+> ## 05/27(수)
+SWEA 디저트카페
+<br>
+<br>
 > ## 05/25(월)
 BOJ 배열돌리기4 [17406](https://www.acmicpc.net/problem/17406)
 <br>
