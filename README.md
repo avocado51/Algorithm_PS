@@ -1,6 +1,12 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+> ## 05/30(목)
+BOJ 다리만들기2 [17472](https://www.acmicpc.net/problem/17472)
+<br>
+BOJ 전국시대 [15809](https://www.acmicpc.net/problem/15809)
+<br>
+<br>
 > ## 05/27(수)
 SWEA 디저트카페
 <br>
