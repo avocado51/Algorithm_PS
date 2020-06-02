@@ -1,6 +1,14 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+> ## 06/02(화)
+SWEA 홈 방범 서비스 [2117](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V61LqAf8DFAWu)
+<br>
+BOJ 화물차 [1400](https://www.acmicpc.net/problem/1400) - unsolved
+<br>
+SWEA 줄기세포배양 [5653](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRJ8EKe48DFAUo) -unsolved
+<br>
+<br>
 > ## 05/31(일)
 BOJ 캐슬 디펜스 [17135](https://www.acmicpc.net/problem/17135)
 <br>
