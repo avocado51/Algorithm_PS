@@ -1,15 +1,17 @@
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <algorithm>
+#include <cstring>
+
 #define INF 1001
 using namespace std;
 //SWEA 줄기세포배양 [5653](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRJ8EKe48DFAUo)
 int n, m, k;
 int map[INF][INF];
-//map[][] == 0 : 없음 
-//map[][] == 1 : 세포 하나 있음 
-//map[][] == 2 : 동시에 번식한 세포 있음 
+//map[][] == 0 : 없음
+//map[][] == 1 : 세포 하나 있음
+//map[][] == 2 : 동시에 번식한 세포 있음
+int ans;
 
 typedef struct Cell
 {
@@ -19,73 +21,113 @@ typedef struct Cell
     //age : 활성화된 후에 지난 시간
     bool enable;
 };
-typedef pair<int, Cell> ic;
+
 vector<Cell> cellMap;
 int dx[4] = {-1, 1, 0, 0}, dy[4] = {0, 0, -1, 1};
 
-bool compare(const ic &a, const ic &b) {
-    return a.second.life > b.second.life;
-}
 void bfs()
 {
+    //세포 번식
     queue<Cell> q;
-    for (int i = 0; i < cellMap.size(); i++)
-    {
-        q.push(cellMap[i]);
-    }
 
+    for (Cell c : cellMap)
+    {
+        q.push(c);
+    }
+    vector<Cell> v;
     int times = 0;
     while (k--)
     {
-        //시간에 따라
-        ++times;
         int size = q.size();
         while (size--)
         {
-            //세포의 개수만큼
-            //시간이 되면 번식한다.
+
             Cell now = q.front();
             q.pop();
 
-            if (now.time == times)
+            int age = now.age;
+            if (!now.enable)
             {
-                //활성화된다.
-                //생성부터 2*x-1시간 후에 죽는다??
-                now.enable = true;
-                now.age += 1;
-            }
+                //아직 활성화 되지 않았음
 
-            if (now.age == 2 * now.life)
-            {
-                //죽음
-                map[now.x][now.y]--;
-                continue;
-            }
-        }
-
-        size = q.size();
-        while (size--)
-        {
-            //enable ==true 인 것들의 번식
-            Cell now = q.front();
-            q.pop();
-
-            if (now.enable)
-            {
-                for (int i = 0; i < 4; i++)
+                if (age + 1 == now.life)
                 {
-                    int nx = now.x + dx[i];
-                    int ny = now.y + dy[i];
-
-                    if (nx < 0 || nx >= INF || ny < 0 || ny >= INF)
-                        continue;
-                    //이미 다른 세포가 있으면 추가 번식 안함
-                    //동시에 번식을 하게 되면 더 생명력이 높은 친구가 살아남는다.
-                    
-
+                    now.enable = true;
+                }
+                q.push({now.x, now.y, now.life, now.time, age + 1, now.enable});
+            }
+            else
+            {
+                //죽은 세포 없앰
+                if (age + 1 != 2 * now.life)
+                {
+                    q.push({now.x, now.y, now.life, now.time, age + 1, now.enable});
                 }
             }
         }
+
+        cout << "first " << q.size() << '\n';
+        size = q.size();
+        v.clear();
+        while (size--)
+        {
+            //번식
+            Cell now = q.front();
+            q.pop();
+
+            int x = now.x;
+            int y = now.y;
+
+            if (now.enable)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    int nx = x + dx[j];
+                    int ny = y + dy[j];
+
+                    if (nx < 0 || nx >= n || ny < 0 || ny >= m)
+                        continue;
+
+                    if (!map[nx][ny])
+                    {
+                        //번식 가능
+                        map[nx][ny] = 2;
+                        v.push_back({nx, ny, now.life, now.life + times, 0, 0});
+                    }
+                    else if (map[nx][ny] == 2)
+                    {
+                        //같은 곳에 잇는 세포보다 생명력이 커야 한다.
+                        for (int i = 0; i < v.size(); i++)
+                        {
+                            if (v[i].x == nx && v[i].y == ny)
+                            {
+                                if (v[i].life < now.life)
+                                {
+                                    v.erase(v.begin() + i);
+                                    v.push_back({nx, ny, now.life, now.life + times, 0, 0});
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            q.push(now);
+        }
+        cout << "v size " << v.size() << '\n';
+        for (int j = 0; j < v.size(); j++)
+        {
+            q.push(v[j]);
+            map[v[j].x][v[j].y] = 1;
+        }
+        cout << "second " << q.size() << '\n';
+        ++times;
+    }
+
+    while (!q.empty())
+    {
+        ans++;
+        q.pop();
     }
 }
 int main()
@@ -99,7 +141,8 @@ int main()
 
     for (int tc = 1; tc <= t; tc++)
     {
-
+        memset(map, 0, sizeof(map));
+        cellMap.clear();
         cin >> n >> m >> k;
 
         int x;
@@ -117,9 +160,10 @@ int main()
                 }
             }
         }
-
+        ans = 0;
         bfs();
-        cout << "#" << tc << " " << '\n';
+
+        cout << "#" << tc << " " << ans << '\n';
     }
 
     return 0;
