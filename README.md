@@ -1,6 +1,12 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+> ## 06/03(수)
+BOJ 불켜기 [11967](https://www.acmicpc.net/problem/11967)
+<br>
+BOJ 마피아 [1079](https://www.acmicpc.net/problem/1079)
+<br>
+<br>
 > ## 06/02(화)
 SWEA 홈 방범 서비스 [2117](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5V61LqAf8DFAWu)
 <br>
