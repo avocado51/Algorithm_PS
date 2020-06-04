@@ -1,6 +1,12 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+> ## 06/04(목)
+BOJ 늑대사냥꾼 [2917](https://www.acmicpc.net/problem/2917)
+<br>
+BOJ 주난의 난 [14497](https://www.acmicpc.net/problem/14497)
+<br>
+<br>
 > ## 06/03(수)
 BOJ 불켜기 [11967](https://www.acmicpc.net/problem/11967)
 <br>
