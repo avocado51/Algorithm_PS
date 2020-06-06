@@ -14,6 +14,8 @@ SWEA 무선충전 [5644](https://swexpertacademy.com/main/code/problem/problemDe
 <br>
 SWEA 줄기세포배양 [5653](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRJ8EKe48DFAUo)
 <br>
+BOJ 이차원 배열의 연산 [17140](https://www.acmicpc.net/problem/17140)
+<br>
 <br>
 > ## 06/05(금)
 BOJ 개미
