@@ -44,13 +44,17 @@ void bfs()
         int y = q.front().second;
         q.pop();
 
-        int minn = INF;
-        for (pp tree : trees)
+        for (int j = 0; j < 4; j++)
         {
-            int dist = abs(tree.first - x) + abs(tree.second - y);
-            minn = min(dist, minn);
+            int nx = x + dx[j];
+            int ny = y + dy[j];
+
+            if (nx < 0 || nx >= n || ny < 0 || ny >= m || visited[nx][ny])
+                continue;
+
+            
         }
-        distMap[x][y] = minn;
+        
     }
 }
 // void dfs(int x, int y, int minn)
@@ -187,19 +191,9 @@ int main()
         for (int j = 0; j < m; j++)
         {
             cin >> map[i][j];
-            if (map[i][j] == 'V')
+            if (map[i][j] == '+')
             {
                 q.push({i, j});
-                sx = i;
-                sy = j;
-            }
-            else if (map[i][j] == '.' || map[i][j] == 'J')
-            {
-                q.push({i, j});
-            }
-            else if (map[i][j] == '+')
-            {
-                trees.push_back({i, j});
                 distMap[i][j] = 0;
             }
         }
