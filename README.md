@@ -1,6 +1,32 @@
 # 백준, SWEA, Programmers 알고리즘 문제 풀이
 
 [풀이 방법 자세히](https://jayrightthere.tistory.com/)
+> ## 06/06(토)
+BOJ 감시 [15683](https://www.acmicpc.net/problem/15683)
+<br>
+BOJ 아이 러브 크로아티아 [9517](https://www.acmicpc.net/problem/9517)
+<br>
+BOJ 로봇청소기 [14503](https://www.acmicpc.net/problem/14503)
+<br>
+BOJ 나무재태크 [16235](https://www.acmicpc.net/problem/16235)
+<br>
+SWEA 무선충전 [5644](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRDL1aeugDFAUo)
+<br>
+SWEA 줄기세포배양 [5653](https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWXRJ8EKe48DFAUo)
+<br>
+BOJ 이차원 배열의 연산 [17140](https://www.acmicpc.net/problem/17140)
+<br>
+<br>
+> ## 06/05(금)
+BOJ 개미
+<br>
+<br>
+> ## 06/04(목)
+BOJ 늑대사냥꾼 [2917](https://www.acmicpc.net/problem/2917)
+<br>
+BOJ 주난의 난 [14497](https://www.acmicpc.net/problem/14497)
+<br>
+<br>
 > ## 06/03(수)
 BOJ 불켜기 [11967](https://www.acmicpc.net/problem/11967)
 <br>
